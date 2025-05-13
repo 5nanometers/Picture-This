@@ -1,0 +1,30 @@
+<%- include('partials/header') %>
+
+  <div class="main-content">
+    <section class="promotional-banner" id="promotional-banner">
+      <img src="/images/mothers-day.jpeg" alt="Mother's Day Deals">
+
+      <!-- Will be dynamically loaded -->
+    </section>
+
+    <section class="deals-section">
+      <div class="deals-header">Today's Deals</div>
+      <div class="deals-subtext">Recently added items</div>
+
+      <div class="deals-items" id="deals-items">
+        <% products.forEach(function(product) { %>
+          <div class="product-card">
+            <img src="<%= product.image %>" alt="<%= product.name %>">
+            <h3>
+              <%= product.name %>
+            </h3>
+            <p>$<%= product.price %>
+            </p>
+            <a href="/product/<%= product.id %>" class="button">View Details</a>
+          </div>
+          <% }) %>
+      </div>
+    </section>
+  </div>
+
+  <%- include('partials/footer') %>
