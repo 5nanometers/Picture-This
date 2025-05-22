@@ -11,7 +11,9 @@
             <p class="description"><%= product.description %></p>
 
             <!-- to do: add to cart button -->
-            <a href="/placeholder" class="button">Buy now</a>
+            <form action="/cart/add/<%= product.id %>" method="POST">
+                <button type="submit">Add to Cart</button>
+            </form>
             <a href="/placeholder" class="button">Add to cart</a>
         </div>
 
