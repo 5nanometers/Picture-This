@@ -233,7 +233,10 @@ nav ul {
   text-align: left;
 }
 
-
+.nav_youraccount {
+  font-size: 14px;
+  text-align: right;
+}
 
 @media (max-width: 600px) {
   .search-form {

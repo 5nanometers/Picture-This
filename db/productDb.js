@@ -8,7 +8,7 @@ const db = new sqlite3.Database('./Cameras.db', (err) => {
     console.log("Connected to the Cameras database.");
 });
 
-// Wrap queries in Promises
+// Wrap queries in Promises 
 const runQuery = (query, params = []) => {
     return new Promise((resolve, reject) => {
         db.all(query, params, (err, rows) => {

@@ -28,12 +28,26 @@
 
 
             <ul>
-                <li><a href="index.html">Sale</a></li>
-                <li><a href="shop.html">Shop</a></li>
-                <li><a href="sell.html">Sell</a></li>
-                <li><a href="contact-us.html">Contact Us</a></li>
+                <li><a href="/">Sale</a></li>
+                <li><a href="/shop">Shop</a></li>
+                <li><a href="/sell">Sell</a></li>
+                <li><a href="/contact-us">Contact Us</a></li>
             </ul>
         </nav>
+
+        <div class="nav_youraccount">
+
+            <% if (user) { %>
+                Welcome, <%= user.username %> 
+                <br />
+                <a href="/login/logout">Log out?</a>
+
+
+            <% } else { %>
+                <a href="/login">Log in</a>
+            <% } %>  
+        </div>
+
 
         <div class="navbar-buttons">
             <a href="/favorites.html" title="Favorites"><i class fa-regular fa-heart></i></a>

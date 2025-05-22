@@ -1,9 +1,9 @@
 var express = require('express');
 var router = express.Router();
-const { runQuery } = require('../db');
+const { runQuery } = require('../db/productDb');
 
 /* GET users listing. */
-router.get('/:id', async function(req, res, next) {
+router.get('/:id', async (req, res, next) => {
   const id = req.params.id;
   try {
     const rows = await runQuery("SELECT * FROM Cameras WHERE id = ?", [id]);

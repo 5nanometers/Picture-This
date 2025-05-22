@@ -1,12 +1,12 @@
 var express = require('express');
 var router = express.Router();
-const { getProducts } = require('../db');
+const { getProducts } = require('../db/productDb');
 
 /* GET home page. */
-router.get('/', async function(req, res, next) {
+router.get('/', async (req, res, next) => {
   try {
     const products = await getProducts();
-    console.log('Retrieved: ', products);
+    // console.log('Retrieved: ', products);
     res.render('index', { title: 'Picture This: Camera Shop', products});
   }  catch (error) {
     next (error);

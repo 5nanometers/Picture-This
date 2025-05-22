@@ -1,0 +1,31 @@
+<%- include('partials/header') %>
+
+<div class="main-content">
+    <div class="register-form-container">
+
+        <h1><%= title %></h1>
+
+        <% if (error) { %>
+            <div class="login-error-message">
+                <%= error %>
+            </div>
+        <% } %>
+
+        <form action="/register" method="POST">
+            <label>
+                Username:
+                <input type="text" name="username" required />
+            </label>
+
+            <label>
+                Password:
+                <input type="password" name="password" required />
+            </label>
+
+            <button type="submit">Register</button>
+        </form>
+    </div>
+</div>
+
+
+<%- include('partials/footer') %>
