@@ -84,7 +84,7 @@ router.post('/add/:id', async (req, res, next) => {
 
         // Add new product to cart via id
         tempCart.push(productId);
-        console.log(tempCart);
+        // console.log(tempCart);
 
         // Save updated cart to database
         await runQuery(
