@@ -4,7 +4,7 @@ Picture This! Is a full-stack web application developed using Node.js, with Expr
 ## Built With
 - HTML5, CSS, Node.js, sqlite3, EJS
 
-## How to Run Locally
+## How to Run
 1. Clone this repo:
     ```bash 
     git clone https://github.com/5nanometers/Picture-This
@@ -14,7 +14,7 @@ Picture This! Is a full-stack web application developed using Node.js, with Expr
 2. Open localhost:3000
 3. Or visit live site at https://night-flawless-quail.glitch.me/ 
 
-## Sample Image
+## Sample Images
 The following screenshot shows an example of what the finished design looks like.
 
 ![Home Page](/public/images/index-screenshot.png)
