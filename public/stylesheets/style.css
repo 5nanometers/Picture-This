@@ -375,7 +375,7 @@ nav ul {
 }
 
 .checkout-box {
-  margin-top: 1.5rem;
+  margin: 3rem auto;
   border: 2px solid rgb(94, 94, 160);
   padding: 2rem;
   padding-bottom: 3rem;
