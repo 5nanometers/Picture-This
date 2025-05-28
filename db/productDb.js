@@ -1,12 +1,14 @@
 const sqlite3 = require('sqlite3').verbose();
 
 // Create or open the camera database
-const db = new sqlite3.Database('./Cameras.db', (err) => {
-    if (err) {
-        return console.error("Error opening database:", err.message);
-    }
-    console.log("Connected to the Cameras database.");
-});
+// const db = new sqlite3.Database('./Cameras.db', (err) => {
+//     if (err) {
+//         return console.error("Error opening database:", err.message);
+//     }
+//     console.log("Connected to the Cameras database.");
+// });
+const path = require('path');
+const db = new sqlite3.Database(path.join(__dirname, '..', 'Cameras.db'));
 
 // Wrap queries in Promises 
 const runQuery = (query, params = []) => {

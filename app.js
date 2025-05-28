@@ -11,6 +11,7 @@ const productRouter = require('./routes/product');
 const loginRouter = require('./routes/login');
 const registerRouter = require('./routes/register');
 const cartRouter = require('./routes/cart');
+const profileRouter = require('./routes/profile');
 
 var app = express();
 
@@ -30,6 +31,7 @@ app.use(session({
 }))
 app.use((req,res,next) => {
   res.locals.user = req.session.user || null;
+  res.set('Cache-Control', 'no-store');
   next();
 });
 
@@ -39,6 +41,7 @@ app.use('/product', productRouter);
 app.use('/login', loginRouter);
 app.use('/register', registerRouter);
 app.use('/cart', cartRouter);
+app.use('/profile', profileRouter);
 
 
 // catch 404 and forward to error handler

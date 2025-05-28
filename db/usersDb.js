@@ -1,11 +1,14 @@
 const sqlite3 = require('sqlite3').verbose();
 
-const db = new sqlite3.Database('./Users.db', (err) => {
-    if (err) {
-        return console.error("Error opening database:", err.message);
-    }
-    console.log("Connected to the Cameras database.");
-});
+// const db = new sqlite3.Database('./Users.db', (err) => {
+//     if (err) {
+//         return console.error("Error opening database:", err.message);
+//     }
+//     console.log("Connected to the Cameras database.");
+// });
+
+const path = require('path');
+const db = new sqlite3.Database(path.join(__dirname, '..', 'Users.db'));
 
 const runQuery = (query, params = []) => {
     return new Promise((resolve, reject) => {

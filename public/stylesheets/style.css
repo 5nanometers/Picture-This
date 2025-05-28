@@ -5,6 +5,9 @@
 }
 
 body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   background-color: #fff;
   line-height: 1.5;
@@ -20,6 +23,10 @@ header {
   border-bottom: 2px solid rgb(94, 94, 160);
 }
 
+.website-logo-container {
+  font-size: 24px;
+  font-weight: bold;
+}
 
 .website-logo {
   font-size: 24px;
@@ -40,7 +47,7 @@ header {
 .search-form {
   display: flex;
   width: 100%;
-  /* max-width: 600px; */
+ max-width: 1000px;
   position: relative;
 }
 
@@ -58,8 +65,7 @@ header {
   /* flex: 1;  */
 }
 
-button {
-  position: absolute;
+.search-button {
   top: 0;
   right: 0;
   width: 50px;
@@ -111,6 +117,7 @@ nav ul {
   /* centers the main content divs */
   margin: 0 auto; 
   padding: 0 25px;
+  align-items: center;
 
 
 }
@@ -179,6 +186,8 @@ nav ul {
   background-color: #aaf;
   padding: 25px 25px;
   border-top: 2px solid rgb(94, 94, 160);
+  text-align: center;
+  margin-top: auto;
 }
 
 .footer-notes {
@@ -212,9 +221,10 @@ nav ul {
 .product-detail {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center; 
   align-items: flex-start; 
-
-  text-align: center;
+  text-align: left;
+  
   padding: 50px;
 }
 .product-detail-image-container {
@@ -223,19 +233,165 @@ nav ul {
 }
 
 .product-detail img {
-  max-width: 300px;
-  border-radius: 5px;
+  max-width: 400px;
+  border-radius: 10px;
 }
 
 .product-detail-cart-column {
   max-width: 500px;
   flex: 1 1 300px;
   text-align: left;
+  flex-direction: column;
 }
+
+.product-name {
+  font-size: 16px;
+}
+
+.product-price {
+  font-size: 24px;
+  font-weight: 500;
+}
+
+.product-box {
+  border: 2px solid rgb(94, 94, 160);
+  padding: 2rem;
+  border-radius: 10px;
+  margin: 2rem auto;
+  max-width: 1000px;
+
+}
+
+
+
+.add-to-cart-button {
+  background-color: #aaf;
+  color: black;
+  padding: 10px 20px;
+  border-radius: 9999px;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 1s, ease;
+  margin-top: 1rem;
+}
+
+.add-to-cart-button:hover {
+  background-color: white;
+  color: #aaf;
+  padding: 10px 20px;
+  border-radius: 9999px;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+  border: 2px solid #aaf;
+}
+
 
 .nav_youraccount {
   font-size: 14px;
   text-align: right;
+}
+
+.cart-title{
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.cart-product-link{
+  color: rgb(94, 94, 160);
+  font-weight: bold;
+  font-size: 14px;
+}
+.cart-total {
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.cart-list {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+.cart-form {
+  display: inline-block;
+  margin-right:0.5rem;
+}
+
+.cart-buttons {
+  margin-top: 0.5rem;
+}
+.cart-button-add {
+  padding: 5px 10px;
+  font-size: 14px;
+  background-color: rgb(170, 255, 205);
+  border: 1px solid #222;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.cart-button-subtract {
+  padding: 5px 10px;
+  font-size: 14px;
+  background-color: rgb(255, 170, 170);
+  border: 1px solid #222;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.checkout-container {
+  margin-top: 1.5rem;
+  display: flex;
+  justify-content: center;
+}
+
+.checkout-button {
+  background-color: #aaf;
+  color: black;
+  padding: 10px 20px;
+  border-radius: 9999px;
+  border: 2px solid rgb(94, 94, 160);
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 1s, ease;
+}
+
+.checkout-button:hover {
+  background-color: white;
+  color: #aaf;
+  padding: 10px 20px;
+  border-radius: 9999px;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+  border: 2px solid #aaf;
+
+}
+
+.checkout-box {
+  margin-top: 1.5rem;
+  border: 2px solid rgb(94, 94, 160);
+  padding: 2rem;
+  padding-bottom: 3rem;
+  border-radius: 10px;
+  max-width: 600px;
+}
+
+.profile-container {
+  max-width: 500px;
+  margin: 25px auto;
+  padding: 0 25px;
+}
+
+.account-info h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
 }
 
 @media (max-width: 600px) {

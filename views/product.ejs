@@ -1,26 +1,31 @@
 <%- include('partials/header') %>
 
-<div class="main-content">
-    <div class="product-detail">
-        <div class="product-detail-image-container">
-            <img src="<%= product.image %>" alt="<%= product.name %>">
+    <div class="main-content">
+        <div class="product-box">
+            <div class="product-detail">
 
+                <div class="product-detail-image-container">
+                    <img src="<%= product.image %>" alt="<%= product.name %>">
+                </div>
+
+
+                <div class="product-detail-cart-column">
+                    <h1 class="product-name">
+                        <%= product.name %>
+                    </h1>
+                    <p class="price">$<%= product.price %>
+                    </p>
+                    <p class="description">
+                        <%= product.description %>
+                    </p>
+
+                    <form action="/cart/add/<%= product.id %>" method="POST">
+                        <button type="submit" class="add-to-cart-button">Add to Cart</button>
+                    </form>
+                </div>
+            </div>
         </div>
-        <div class="product-detail-cart-column">
-            <p class="price">$<%= product.price %></p>
-            <p class="description"><%= product.description %></p>
-
-            <!-- to do: add to cart button -->
-            <form action="/cart/add/<%= product.id %>" method="POST">
-                <button type="submit">Add to Cart</button>
-            </form>
-            <a href="/placeholder" class="button">Add to cart</a>
-        </div>
-
-        <h1><%= product.name %></h1>
-
     </div>
-</div>
 
 
-<%- include('partials/footer') %>
+    <%- include('partials/footer') %>

@@ -2,7 +2,7 @@ var express = require('express');
 var router = express.Router();
 const { runQuery } = require('../db/productDb');
 
-/* GET users listing. */
+/* GET product listing. */
 router.get('/:id', async (req, res, next) => {
   const id = req.params.id;
   try {
