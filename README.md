@@ -16,6 +16,6 @@ Picture This! Is a full-stack web application developed using Node.js, with Expr
 ## Sample Image
 The following screenshot shows an example of what the finished design looks like.
 
-![Home Page](/public/index-screenshot.png)
+![Home Page](/public/images/index-screenshot.png)
 ![Cart Page](/public/images/cart-screenshot.png)
 ![Product Page](/public/images/product-screenshot.png)
