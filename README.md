@@ -9,8 +9,9 @@ Picture This! Is a full-stack web application developed using Node.js, with Expr
     ```bash 
     git clone https://github.com/5nanometers/Picture-This
     cd Picture-This
+    npm start
 
-2. Open index.html in your web browser.
+2. Open localhost:3000
 3. Or visit live site at https://night-flawless-quail.glitch.me/ 
 
 ## Sample Image
